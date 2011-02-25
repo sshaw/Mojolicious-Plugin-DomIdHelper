@@ -1,0 +1,5 @@
+MANIFEST
+README.pod
+Makefile.PL
+lib/Mojolicious/Plugin/DomIdHelper.pm
+t/dom_id_helper_lite_app.t
