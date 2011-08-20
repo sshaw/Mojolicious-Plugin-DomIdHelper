@@ -89,6 +89,8 @@ sub _generate_dom_class
     my @namespace = split /\b::\b/, $type; 
     my $delimiter = $config{delimiter};
 
+    # use Lingua-EN-Inflect for collection naming
+
     # Do we want to strip the prefix from the package name
     if(!$config{keep_namespace} && @namespace > 1) {
       @namespace = pop @namespace;

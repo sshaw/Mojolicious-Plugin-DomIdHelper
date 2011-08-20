@@ -1,2 +1,3 @@
-2011-08-20 v0.2
+2011-08-20 v0.02
+* Changed version scheme to from X.X to X.XX
 * Added dom_class() 
