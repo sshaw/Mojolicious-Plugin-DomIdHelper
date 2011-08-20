@@ -44,28 +44,27 @@ get '/plugin_overrides' => sub {
 
 my $t = Test::Mojo->new;
 $t->get_ok('/plugin_defaults')->status_is(200)->content_is(<<END_HTML);
-<div id="user_1"></div>
-<div id="array"></div>
+<div id="user_1" class="user"></div>
+<div id="array" class="array"></div>
 <div id="user*1"></div>
 <div id="user_sshaw"></div>
-<div id="db-package-user-1sshaw"></div>
+<div id="db-package-user-1sshaw" class="db-package-user"></div>
 END_HTML
 
 
 $t->get_ok('/plugin_overrides')->status_is(200)->content_is(<<END_HTML);
-<div id="db-package-user-1sshaw"></div>
+<div id="db-package-user-1sshaw" class="db-package-user"></div>
 END_HTML
 
 
 __DATA__
 
 @@ plugin_defaults.html.ep
-<div id="<%= dom_id($user) %>"></div>
-<div id="<%= dom_id([]) %>"></div>
+<div id="<%= dom_id($user) %>" class="<%= dom_class($user) %>"></div>
+<div id="<%= dom_id([]) %>" class="<%= dom_class([]) %>"></div>
 <div id="<%= dom_id($user, delimiter => '*') %>"></div>
 <div id="<%= dom_id($user, method => 'name') %>"></div>
-<div id="<%= dom_id($user, method => [qw{id name}], delimiter => '-', keep_namespace => 1) %>"></div>
-
+<div id="<%= dom_id($user, method => [qw{id name}], delimiter => '-', keep_namespace => 1) %>" class="<%= dom_class($user, delimiter => '-', keep_namespace => 1) %>"></div>
 
 @@ plugin_overrides.html.ep
-<div id="<%= dom_id($user) %>"></div>
+<div id="<%= dom_id($user) %>" class="<%= dom_class($user) %>"></div>
