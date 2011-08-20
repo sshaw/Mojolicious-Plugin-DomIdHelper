@@ -77,3 +77,12 @@ Keep the full package name when generating the DOM ID. Defaults to C<0> (false).
 =head1 AUTHOR
 
 Skye Shaw <sshaw AT lucas.cis.temple.edu>
+
+=head1 SEE ALSO
+
+L<Mojolicious> and L<Mojolicious::Plugin::TagHelpers>
+
+=head1 LICENSE
+
+This library is free software; you can redistribute it and/or modify it under the same terms as Perl itself.
+
