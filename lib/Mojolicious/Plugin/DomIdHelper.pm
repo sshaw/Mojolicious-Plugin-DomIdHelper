@@ -76,6 +76,7 @@ sub _generate_dom_id
 	if(@suffix) {
 	    $dom_id .= $delimiter;
 	    $dom_id .= join '', @suffix;
+            $dom_id =~ s/\s+/$delimiter/g;
 	}
     }
 
