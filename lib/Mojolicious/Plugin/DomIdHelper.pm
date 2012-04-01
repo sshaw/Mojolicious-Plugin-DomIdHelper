@@ -35,7 +35,6 @@ sub register
 	    my $dom_id = $self->_generate_dom_id($obj, %config);
 
 	    xml_escape($dom_id);
-	    $dom_id;
     });
 
     $app->helper( 		 
@@ -46,7 +45,6 @@ sub register
 	    my $dom_class = $self->_generate_dom_class($obj, %config);
 
 	    xml_escape($dom_class);
-	    $dom_class;
     });		
 }
 
