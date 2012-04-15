@@ -35,7 +35,6 @@ sub register
 	    my $dom_id = $self->_generate_dom_id($obj, %config);
 
 	    xml_escape($dom_id);
-	    $dom_id;
     });
 
     $app->helper( 		 
@@ -46,7 +45,6 @@ sub register
 	    my $dom_class = $self->_generate_dom_class($obj, %config);
 
 	    xml_escape($dom_class);
-	    $dom_class;
     });		
 }
 
@@ -76,6 +74,7 @@ sub _generate_dom_id
 	if(@suffix) {
 	    $dom_id .= $delimiter;
 	    $dom_id .= join '', @suffix;
+            $dom_id =~ s/\s+/$delimiter/g;
 	}
     }
 
