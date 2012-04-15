@@ -1,4 +1,0 @@
-lib/Mojolicious/Plugin/DomIdHelper.pm
-Makefile.PL
-MANIFEST			
-t/dom_id_helper_lite_app.t
