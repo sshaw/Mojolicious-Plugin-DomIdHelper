@@ -2,14 +2,14 @@ use ExtUtils::MakeMaker;
 
 WriteMakefile(NAME          => 'Mojolicious::Plugin::DomIdHelper',
 	      AUTHOR        => 'Skye Shaw <sshaw AT lucas.cis.temple.edu>',
-	      PREREQ_PM     => { Mojolicious => 0 },
+	      PREREQ_PM     => { Mojolicious => '2.20' },
 	      LICENSE 	    => 'perl',
 	      VERSION_FROM  => 'lib/Mojolicious/Plugin/DomIdHelper.pm',
 	      ABSTRACT_FROM => 'lib/Mojolicious/Plugin/DomIdHelper.pm',
 	     (eval { ExtUtils::MakeMaker->VERSION(6.46) } ?
-	        (META_MERGE  => { resources => { bugtracker => 'http://github.com/sshaw/Mojolicious-Plugin-DomIdHelper/issues' } }) : ())     
+		(META_MERGE  => { resources => { bugtracker => 'http://github.com/sshaw/Mojolicious-Plugin-DomIdHelper/issues' } }) : ()));
 
-# Create README.pod for a repo's GitHub page. Unlike CPAN, GitHub won't 
+# Create README.pod for a repo's GitHub page. Unlike CPAN, GitHub won't
 # display the module's POD, it looks for a README.*
 sub MY::postamble
 {

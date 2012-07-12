@@ -68,7 +68,6 @@ sub _generate_dom_id
 	    push @suffix, $obj->$method;
 	}
 	
-	local $_;
 	@suffix = grep defined, @suffix;
 
 	if(@suffix) {
@@ -96,7 +95,6 @@ sub _generate_dom_class
     }
  
     # Split the package name on camelcase bounderies
-    local $_;    
     my $dom_class = join $delimiter, map {
 	s/([^A-Z])([A-Z])/$1$delimiter$2/g;
 	s/([A-Z])([A-Z][^A-Z])/$1$delimiter$2/g;
