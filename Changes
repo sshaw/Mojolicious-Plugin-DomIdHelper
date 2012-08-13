@@ -1,4 +1,4 @@
-2012-XX-XX v0.04
+2012-09-14 v0.04
 * Bug fix: remove whitespace from DOM IDs
 * Require Mojolicious >= 2.20
 

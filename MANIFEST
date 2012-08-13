@@ -1,0 +1,7 @@
+Changes
+INSTALL.SKIP
+lib/Mojolicious/Plugin/DomIdHelper.pm
+Makefile.PL
+MANIFEST			This list of files
+README.pod
+t/dom_id_helper_lite_app.t

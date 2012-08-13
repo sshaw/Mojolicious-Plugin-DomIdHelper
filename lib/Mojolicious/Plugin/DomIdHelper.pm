@@ -4,7 +4,7 @@ use Mojo::Base 'Mojolicious::Plugin';
 use Mojo::Util qw{xml_escape};
 use Scalar::Util qw{blessed};
 
-our $VERSION = '0.03';
+our $VERSION = '0.04';
 
 # Method used to retrieve the object's PK
 my $METHOD = 'id';
