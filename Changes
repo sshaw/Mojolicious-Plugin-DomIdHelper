@@ -1,3 +1,6 @@
+2012-XX-XX v0.05
+* Bug fix: Build failed if perldoc was not in the PATH (thanks Andreas J. König)
+
 2012-09-14 v0.04
 * Bug fix: remove whitespace from DOM IDs
 * Require Mojolicious >= 2.20
