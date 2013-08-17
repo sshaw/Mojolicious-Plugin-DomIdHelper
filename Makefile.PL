@@ -7,7 +7,8 @@ WriteMakefile(NAME          => 'Mojolicious::Plugin::DomIdHelper',
 	      VERSION_FROM  => 'lib/Mojolicious/Plugin/DomIdHelper.pm',
 	      ABSTRACT_FROM => 'lib/Mojolicious/Plugin/DomIdHelper.pm',
 	     (eval { ExtUtils::MakeMaker->VERSION(6.46) } ?
-		(META_MERGE  => { resources => { bugtracker => 'http://github.com/sshaw/Mojolicious-Plugin-DomIdHelper/issues' } }) : ()));
+		(META_MERGE  => { resources => { bugtracker => 'http://github.com/sshaw/Mojolicious-Plugin-DomIdHelper/issues',
+                                                 repository => 'http://github.com/sshaw/Mojolicious-Plugin-DomIdHelper'} }) : ())
 
 # Create README.pod for a repo's GitHub page. Unlike CPAN, GitHub won't
 # display the module's POD, it looks for a README.*
